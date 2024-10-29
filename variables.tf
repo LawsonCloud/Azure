@@ -1,8 +1,3 @@
-variable "subscription_id" {
-  description = "The Azure subscription ID"
-  type        = string
-}
-
 variable "location" {
   description = "The Azure region to deploy resources"
   type        = string
@@ -12,5 +7,21 @@ variable "location" {
 variable "resource_type" {
   description = "The type of resource"
   type        = string
-  default     = "static_web_app"
+  default = "vnet"
+}
+
+variable "vnet_name" {
+  description = "The name of the vnet"
+  type        = string
+  default     = "value" 
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group"
+  type        = string
+  default     = "value" 
+}
+
+variable "tags" {
+  type        = map(string)
 }

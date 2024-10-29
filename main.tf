@@ -1,8 +1,9 @@
-module "static_web_app" {
-  source              = "./modules/static_web_app"
+module "vnet" {
+  source              = "./modules/vnet"
+  vnet_name           = var.vnet_name
   location            = var.location
-  resource_type       = var.resource_type
-  resource_group_name = "rg-${var.location}-${var.resource_type}"
+  resource_group_name = var.resource_group_name
+  tags                = var.tags
 }
 
 
