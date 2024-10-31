@@ -17,3 +17,9 @@ module "vm" {
   tags                = var.tags
 }
 
+module "swa" {
+  source              = "./modules/swa" 
+  location            = "centralus"
+  tags                = var.tags
+}
+
