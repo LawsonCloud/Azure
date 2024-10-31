@@ -9,9 +9,10 @@ variable "location" {
   type        = string
 }
 
-variable "resource_group_name" {
+variable "vm_rg" {
   description = "Name of the resource group where the VNet will be created"
   type        = string
+  default     = "rg-vm"
 }
 
 variable "tags" {
@@ -20,8 +21,11 @@ variable "tags" {
   default     = {}
 }
 
-variable "resource_type" {
-  description = "The type of resource"
+variable "subnet_name" {
+  description = "Name of the subnet"
   type        = string
-  default     = "vnet"
+}
+
+variable "subnet_id" {
+  type = string
 }
